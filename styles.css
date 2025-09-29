@@ -1,0 +1,34 @@
+/* option 1 */
+:root { 
+  --background: #0D0D0D;       /* deep black */
+  --primary: #E63946;          /* strong red */
+  --secondary: #457B9D;        /* cool blue */
+  --text-main: #F1FAEE;        /* bright white */
+  --text-muted: #A8A8A8;       /* soft gray */
+  --highlight: #F4A261;        /* orange highlight */
+  --accent: #2A9D8F;           /* teal accent */
+}
+
+/* option 2 */
+:root {
+  --background: #F8F9FA;       /* light neutral */
+  --primary: #2D6A4F;          /* turf green */
+  --secondary: #1D3557;        /* navy blue */
+  --text-main: #212529;        /* dark gray text */
+  --text-muted: #6C757D;       /* muted gray */
+  --highlight: #FFD60A;        /* energetic yellow */
+  --accent: #E63946;           /* strong red */
+}
+
+/* option 3 */
+:root {
+  --background: #1B1B1E;       /* dark gray */
+  --primary: #006D77;          /* sporty teal */
+  --secondary: #FF6B35;        /* vibrant orange */
+  --text-main: #FFFFFF;        /* clean white */
+  --text-muted: #ADB5BD;       /* muted gray */
+  --highlight: #FFD166;        /* golden yellow */
+  --accent: #118AB2;           /* strong blue */
+}
+
+
