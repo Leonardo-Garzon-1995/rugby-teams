@@ -89,5 +89,70 @@ h1 {
     color: var(--secondary);
 }
 
+.team-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    /* border: 2px solid red; */
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.team-name,
+.team-headCoach,
+.team-victories {
+    margin-bottom: 0.5rem;
+}
+
+.player-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-name,
+.player-number,
+.player-position {
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.player-stats-btn {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.player-stats-btn:hover {
+    background-color: var(--secondary);
+}
+
 
 
