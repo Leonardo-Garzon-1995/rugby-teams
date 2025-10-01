@@ -141,23 +141,25 @@ const rugbyTeams = [
     },
 ]
 
-const teamInfo = document.querySelector(".team-info");
 const selectTeam = document.getElementById("select-team");
+    const teamNameEl = document.getElementById("team-name");
+    const headCoachEl = document.getElementById("team-headCoach");
+    const teamVictoriesEl = document.getElementById("team-victories");
+    const teamYearEl = document.getElementById("team-year");
+    
+function updateTeamInfo() {
+    const value = selectTeam.value; 
+    const team = rugbyTeams.find(t => t.teamName.toLowerCase().replace(/\s+/g, "-") === value);
 
-function showTeamInfo(team) {
-    const teamNameEl = document.getElementById("team-name")
-    const headCoachEl = document.getElementById("team-headCoach")
-    const teamVictoriesEl = document.getElementById("team-victories")
-
-    team = rugbyTeams.find((team) => team.teamName === teamNameEl.value);
-
-    rugbyTeams.filter((team) => {
+    if (team) {
         teamNameEl.textContent = team.teamName;
         headCoachEl.textContent = team.headCoach;
+        teamYearEl.textContent = team.year;
         teamVictoriesEl.textContent = team.victories;
-    })
+    }
 }
 
-selectTeam.addEventListener("change", (e) => {
-    showTeamInfo(e.target.value);
-})  
+selectTeam.addEventListener("change", updateTeamInfo);
+
+// run once at start
+updateTeamInfo();
