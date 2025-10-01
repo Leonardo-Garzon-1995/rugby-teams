@@ -22,6 +22,9 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,8 +108,13 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.team-info h2,
+.team-info h3,
+.team-info p {
+    margin-bottom: 0.5rem;
+}
 .team-info span {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--highlight);
 }
 
@@ -114,13 +122,26 @@ h1 {
 .team-headCoach,
 .team-victories {
     margin-bottom: 0.5rem;
+    font-family: "Orbitron", sans-serif;
 }
+
+.position-select-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+
 
 .player-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
+    background-color: var(--primary);
+    padding: 20px;
+    width: 100vw;
 }
 
 .player-card {
