@@ -1,5 +1,6 @@
-const rugbyTeams ={
-    "England": {
+const rugbyTeams = [
+    {
+        teamName: "England",
         headCoach: "Stuart Hogg",
         year: 2023,
         victories: 6,
@@ -12,7 +13,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Ireland": {
+    {
+        teamName: "Ireland",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -25,7 +27,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Scotland": {
+    {
+        teamName: "Scotland",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -38,7 +41,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Wales": {
+    {
+        teamName: "Wales",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -51,7 +55,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "France": {
+    {
+        teamName: "France",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -64,7 +69,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Italy": {
+    {
+        teamName: "Italy",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -77,7 +83,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Spain": {
+    {
+        teamName: "Spain",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -90,7 +97,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Australia": {
+    {
+        teamName: "Australia",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -103,7 +111,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "New Zealand": {
+    {
+        teamName: "New Zealand",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -116,7 +125,8 @@ const rugbyTeams ={
             },
         ]
     },
-    "Argentina": {
+    {
+        teamName: "Argentina",
         headCoach: "John Anderson",
         year: 2023,
         victories: 6,
@@ -129,4 +139,25 @@ const rugbyTeams ={
             },
         ]
     },
+]
+
+const teamInfo = document.querySelector(".team-info");
+const selectTeam = document.getElementById("select-team");
+
+function showTeamInfo(team) {
+    const teamNameEl = document.getElementById("team-name")
+    const headCoachEl = document.getElementById("team-headCoach")
+    const teamVictoriesEl = document.getElementById("team-victories")
+
+    team = rugbyTeams.find((team) => team.teamName === teamNameEl.value);
+
+    rugbyTeams.filter((team) => {
+        teamNameEl.textContent = team.teamName;
+        headCoachEl.textContent = team.headCoach;
+        teamVictoriesEl.textContent = team.victories;
+    })
 }
+
+selectTeam.addEventListener("change", (e) => {
+    showTeamInfo(e.target.value);
+})  
