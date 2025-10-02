@@ -141,12 +141,14 @@ const rugbyTeams = [
     },
 ]
 
+
+// Team Selection functionality
 const selectTeam = document.getElementById("select-team");
-    const teamNameEl = document.getElementById("team-name");
-    const headCoachEl = document.getElementById("team-headCoach");
-    const teamVictoriesEl = document.getElementById("team-victories");
-    const teamYearEl = document.getElementById("team-year");
-    
+const teamNameEl = document.getElementById("team-name");
+const headCoachEl = document.getElementById("team-headCoach");
+const teamVictoriesEl = document.getElementById("team-victories");
+const teamYearEl = document.getElementById("team-year");
+
 function updateTeamInfo() {
     const value = selectTeam.value; 
     const team = rugbyTeams.find(t => t.teamName.toLowerCase().replace(/\s+/g, "-") === value);
@@ -163,3 +165,7 @@ selectTeam.addEventListener("change", updateTeamInfo);
 
 // run once at start
 updateTeamInfo();
+
+// Player selection functionality
+
+
